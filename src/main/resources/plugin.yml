@@ -1,0 +1,14 @@
+name: CanardHeadDrop
+version: 1.0.0
+main: fr.canarddev.headdrop.CanardHeadDrop
+api-version: '1.21'
+author: CanardDev
+description: Player heads drop on death (PvP / PvE, chance, limits, anti-rename).
+commands:
+  headdrop:
+    description: CanardHeadDrop admin command
+    aliases: [hdrop]
+permissions:
+  headdrop.admin:
+    description: Use /headdrop
+    default: op

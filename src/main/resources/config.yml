@@ -1,0 +1,41 @@
+# ============================================================
+#  CanardHeadDrop - by CanardDev
+#  Player heads drop when a player dies.
+# ============================================================
+
+# Messages language: en or fr (files messages_en.yml / messages_fr.yml)
+language: en
+
+drop:
+  # Killed by another player
+  pvp: true
+  # Any other death (mobs, fall, lava...)
+  pve: false
+  # Worlds where heads drop. Empty list = every world.
+  # Example: [world, world_nether, world_the_end]
+  worlds: []
+  # Drop chance in % (100 = always)
+  chance: 100.0
+  # Max heads a single player can ever drop (reset with /headdrop reset <player>)
+  limit:
+    enabled: false
+    max: 5
+
+head:
+  # %player% = the dead player's name. Colors: &a, &l, &#ff8800...
+  name: "&e%player% &7- &fHead"
+  lore:
+    - "&8☠ Player head"
+  # Heads from this plugin cannot be renamed in an anvil
+  prevent-rename: true
+
+effects:
+  # Lightning effect (no damage, no fire)
+  lightning: false
+  # Chat message to everyone (text in messages_xx.yml -> broadcast)
+  broadcast: false
+  sound:
+    enabled: false
+    name: entity.player.levelup
+    volume: 1.0
+    pitch: 1.0
